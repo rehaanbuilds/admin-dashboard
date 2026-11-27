@@ -12,11 +12,15 @@ button {
     cursor: pointer;
 }
 
+img {
+    object-fit: contain;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .icon {
@@ -53,6 +57,7 @@ button {
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .main-nav, .bottom-nav {
@@ -86,7 +91,7 @@ button {
 .toolbar-search {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .search-bar {
@@ -113,8 +118,8 @@ button {
 }
 
 .toolbar-right img {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
 }
 
 .toolbar-right .morgan-profile {
@@ -160,13 +165,23 @@ button {
 .main-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     gap: 20px;
     padding: 30px 20px;
 }
 
+.main-content p{
+    color: grey;
+}
+
 .projects {
     grid-row: 1 / -1;
+}
+
+.projects, .announcements, .trending {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    row-gap: 15px;
 }
 
 .projects-content {
@@ -181,7 +196,6 @@ button {
     padding: 30px;
     border-radius: 8px;
     border-left: 8px solid rgb(255, 174, 0);
-    height: 200px;
     
     display: grid;
     grid-template-rows: 1fr auto;
@@ -203,30 +217,40 @@ button {
 .announcements-content {
     background-color: white;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-rows: repeat(3, max-content);
+    gap: 20px;
     border-radius: 8px;
     padding: 30px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-.announcements-card {
-    padding-bottom: 15px;
-    border-bottom: 2px solid grey;
+.announcements p {
+    font-size: 14px;
+}
+
+.announcement-card {
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgb(228, 227, 227);
+}
+
+.announcement-card:last-child {
+    border: none;
+    padding-bottom: 0;
 }
 
 .trending-content {
     background-color: white;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .trending-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 15px;
 }
@@ -236,26 +260,30 @@ button {
     width: 50px;
 }
 
+.trending-user > p:first-child {
+    color: black;
+}
+
 .morgan-profile {
     border-radius: 999px;
-    padding: 5px;
+    padding: 6px;
     background-color: orange;
 }
 
 .tegan-profile {
     border-radius: 999px;
-    padding: 5px;
+    padding: 6px;
     background-color: skyblue;
 }
 
 .kendall-profile {
     border-radius: 999px;
-    padding: 5px;
+    padding: 6px;
     background-color: grey;
 }
 
 .alex-profile {
     border-radius: 999px;
-    padding: 5px;
+    padding: 6px;
     background-color: pink;
 }

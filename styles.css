@@ -8,6 +8,10 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -65,8 +69,11 @@ body {
 .header {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    padding: 0px 30px;
+    padding: 0px 50px;
+    padding-bottom: 10px;
     align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .header-toolbar {
@@ -95,14 +102,24 @@ body {
     display: grid;
     grid-template-columns: repeat(3, auto);
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     gap: 25px;
+    font-weight: bold;
 }
 
 .toolbar-right button {
     background-color: white;
     border: none;
-    cursor: pointer;
+}
+
+.toolbar-right img {
+    height: 30px;
+    width: 30px;
+}
+
+.toolbar-right .morgan-profile {
+    height: 50px;
+    width: 50px;
 }
 
 .header-welcome {
@@ -114,13 +131,19 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
+}
+
+.welcome-left img {
+    height: 70px;
+    width: 70px;
 }
 
 .welcome-actions {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, max-content);
     align-items: center;
+    justify-content: end;
     gap: 25px;
 }
 
@@ -129,7 +152,7 @@ body {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 12px 40px;
     border: none;
     border-radius: 999px;
 }
@@ -155,13 +178,14 @@ body {
 
 .project-card {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     border-left: 8px solid rgb(255, 174, 0);
     height: 200px;
     
     display: grid;
     grid-template-rows: 1fr auto;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .project-action {
@@ -174,7 +198,6 @@ body {
 .project-action button {
     background: none;
     border: none;
-    cursor: pointer;
 }
 
 .announcements-content {
@@ -184,6 +207,7 @@ body {
     gap: 30px;
     border-radius: 8px;
     padding: 30px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .announcements-card {
@@ -198,10 +222,40 @@ body {
     gap: 20px;
     border-radius: 8px;
     padding: 20px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .trending-card {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.trending-card img {
+    height: 50px;
+    width: 50px;
+}
+
+.morgan-profile {
+    border-radius: 999px;
+    padding: 5px;
+    background-color: orange;
+}
+
+.tegan-profile {
+    border-radius: 999px;
+    padding: 5px;
+    background-color: skyblue;
+}
+
+.kendall-profile {
+    border-radius: 999px;
+    padding: 5px;
+    background-color: grey;
+}
+
+.alex-profile {
+    border-radius: 999px;
+    padding: 5px;
+    background-color: pink;
 }
